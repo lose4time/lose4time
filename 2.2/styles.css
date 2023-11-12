@@ -1,0 +1,29 @@
+td,th {
+
+   border: 1px solid black;
+    border-collapse: collapse;
+}
+th {
+    border-bottom: 2px solid black;
+}
+table {
+
+border-collapse: collapse;
+     width: 700px;
+    height: 150px;
+border-left: 2px solid black;
+border-right: 2px solid black;
+}
+body {
+      margin-left: 100px;
+      margin-right: 100px;
+}
+tr:nth-child(5)
+{
+    border-top:2px solid black;
+}
+
+tr:nth-child(2)>td:nth-child(2),
+tr:nth-child(3)>td:nth-child(1){
+    border-right:2px solid black;
+}

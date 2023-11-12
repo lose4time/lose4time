@@ -1,0 +1,17 @@
+.cl_blue {
+    color:blue;
+}
+#pole1 {
+  font-size: 90%;  
+}
+#pole3 {
+    background-color: aqua;
+    text-align: right;
+}
+#pole4 {
+    font-style: italic;
+    text-decoration: underline;
+    background-color: pink
+}
+
+
