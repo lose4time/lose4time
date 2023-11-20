@@ -1,0 +1,57 @@
+.letter {
+  display: inline-block;
+  opacity: 0;
+}
+
+div {
+  display: inline-block;
+}
+
+h1 {
+    font-family: cursive
+}
+.top {
+    font-size: 100px;
+}
+.sasha {
+    width: 1000px;
+    border-radius: 25px;
+     outline: none;
+  border: none;
+  display: block;
+  position: relative;
+  text-transform: uppercase;
+  color: white;
+}
+.sasha:hover{ 
+  top: 2px;
+}
+
+button {
+  outline: none;
+  border: none;
+  padding: 25px 80px;
+  background-color: #ffae19;
+  border-radius: 10px;
+  margin: 10px auto;
+  display: block;
+  position: relative;
+  font-size: 40px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  box-shadow: 0 6px #ffa500;
+  color: white;
+}
+
+.sex:hover{
+     box-shadow: 0 4px #ffa500;
+  top: 2px;
+}
+.sex:active{
+    top: 4px;
+}
+.top {
+    display: flex;
+    justify-content: space-between;
+}
+
