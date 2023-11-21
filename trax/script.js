@@ -1,12 +1,12 @@
 
-let clicks_up = parseFloat(localStorage.clicks_up);
-let clicks = parseFloat(localStorage.clicks);
-if (clicks==undefined) clicks = 0;
-if (clicks_up==undefined) clicks_up = 0;
+var clicks = 0;
+var clicks_up = 0;
+  clicks = parseFloat(localStorage.getItem("clicks") || 0);
+clicks_up = parseFloat(localStorage.getItem("clicks_up") || 0);
 
 
     function countClicks(path) {
-        clicks += 0.5;
+        clicks += parseFloat(0.5);
         document.getElementById("clicks").innerHTML = clicks;
          var audio = new Audio(); // Создаём новый элемент Audio
   audio.src = 'ebu.mp3'; // Указываем путь к звуку "клика"
@@ -57,9 +57,10 @@ function soundClick() {
 }
 
 setInterval(function() {
-        clicks += clicks_up;
-        localStorage.clicks = clicks;
-        localStorage.clicks_up = clicks_up;
+
+       clicks += clicks_up;
+       // localStorage.clicks = clicks;
+      //  localStorage.clicks_up = clicks_up;
          document.getElementById("clicks").innerHTML = clicks;
          document.getElementById("clicks_up").innerHTML = clicks_up;
     
@@ -70,8 +71,8 @@ function startCounting() {
  if (clicks>=100) {
     clicks_up+=0.5;
      clicks-=100;
-    document.getElementById("clicks").innerHTML = clicks;
-document.getElementById("clicks_up").innerHTML = clicks_up;
+    document.getElementById("clicks").innerHTML = localStorage.clicks;
+document.getElementById("clicks_up").innerHTML = parseFloat(clicks_up);
  }
  else {
          var audio = new Audio(); // Создаём новый элемент Audio
@@ -96,6 +97,14 @@ let animation = anime({
  
 });   
 
+
+function saveGame() {
+    
+  localStorage.setItem("clicks", clicks);
+    localStorage.setItem("clicks_up", clicks_up);
+  
+}
+setInterval(saveGame, 1000)
      
 
 
