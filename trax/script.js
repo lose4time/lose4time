@@ -1,5 +1,10 @@
- var clicks = 0; // change int to var here
- var clicks_up=0;
+
+let clicks_up = parseFloat(localStorage.clicks_up);
+let clicks = parseFloat(localStorage.clicks);
+if (clicks==undefined) clicks = 0;
+if (clicks_up==undefined) clicks_up = 0;
+
+
     function countClicks(path) {
         clicks += 0.5;
         document.getElementById("clicks").innerHTML = clicks;
@@ -22,7 +27,18 @@ function whistel(){
         alert('Долбаеб, посмотри, сколько у тебя')
     }
 }
-
+function boss(){
+     if (clicks>=500) {
+     window.open('https://t.me/+67m3XDgc1r40ZjUy', '_blank');
+         clicks-=500;
+     }
+    else {
+         var audio = new Audio(); // Создаём новый элемент Audio
+  audio.src = 'false.mp3'; // Указываем путь к звуку "клика"
+  audio.autoplay = true; // Автоматически запускаем
+        alert('Долбаеб, посмотри, сколько у тебя')
+    }
+}
 
 function soundClick() {
     if (clicks>=20) {
@@ -42,8 +58,13 @@ function soundClick() {
 
 setInterval(function() {
         clicks += clicks_up;
+        localStorage.clicks = clicks;
+        localStorage.clicks_up = clicks_up;
          document.getElementById("clicks").innerHTML = clicks;
+         document.getElementById("clicks_up").innerHTML = clicks_up;
+    
       }, 1000);
+
 
 function startCounting() {
  if (clicks>=100) {

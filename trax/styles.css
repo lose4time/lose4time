@@ -7,14 +7,16 @@ div {
   display: inline-block;
 }
 
-h1 {
-    font-family: cursive
-}
-.top {
-    font-size: 100px;
+.header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+    font-family: cursive;
+    font-weight: bold;
 }
 .sasha {
-    width: 1000px;
+    width: 45%;
+    
     border-radius: 25px;
      outline: none;
   border: none;
@@ -27,7 +29,20 @@ h1 {
   top: 2px;
 }
 
-button {
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image:url(https://sun6-20.userapi.com/s/v1/ig2/vcEvhCuEp_a8fTWC_kbbr3M4ssT_-X9vIiFfU10Re3xwJY4_JCRlrBGBsHdsoKRkUzhs6kCjQluTTwmBKBYsyo4m.jpg?size=200x200&quality=96&crop=0,0,800,800&ava=1);
+}
+ 
+.reklama {
+    width: 30%
+}
+iframe {
+    width: 80%
+}
+.sex {
   outline: none;
   border: none;
   padding: 25px 80px;
@@ -43,6 +58,52 @@ button {
   color: white;
 }
 
+.dropbtn {
+  background-color: goldenrod;
+  color: white;
+  padding: 16px;
+  font-size: 45px;
+  border: none;
+    
+    
+}
+
+/* Контейнер <div> - необходим для размещения выпадающего содержимого */
+.dropdown {
+  position: relative;
+  display: inline-block;
+    font-size: 20px;
+}
+
+#marketWidget {
+    width: 80%;
+}
+/* Выпадающее содержимое (скрыто по умолчанию) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Ссылки внутри выпадающего списка */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Изменение цвета выпадающих ссылок при наведении курсора */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Показать выпадающее меню при наведении курсора */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Изменение цвета фона кнопки раскрывающегося списка при отображении содержимого раскрывающегося списка */
+.dropdown:hover .dropbtn {background-color: darkgoldenrod;}
 .sex:hover{
      box-shadow: 0 4px #ffa500;
   top: 2px;
